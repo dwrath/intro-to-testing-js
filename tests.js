@@ -71,9 +71,22 @@ describe('isEven', function (){
     it('should return a boolean', function() {
         expect(typeof isEven()).toBe('boolean');
     });
-    it('should return a boolean', function() {
+    it('should return false', function() {
         expect(isEven(5)).toBe(false);
     });
+    it('should return true', function() {
+        expect(isEven(2)).toBe(true);
+    });
+    it('should return true', function() {
+        expect(isEven(-4)).toBe(true);
+    });
+    it('should return false', function() {
+        expect(isEven("banana")).toBe(false);
+    });
+    it('should return false', function() {
+        expect(isEven(Infinity)).toBe(false);
+    });
+
 
 })
 
@@ -87,6 +100,15 @@ describe('isVowel', function (){
     it('should return a true for a as input', function() {
         expect(isVowel('a')).toBe(true);
     });
+    it('should return a true for A as input', function() {
+        expect(isVowel('A')).toBe(true);
+    });
+    it('should return a false', function() {
+        expect(isVowel(4)).toBe(false);
+    });
+    it('should return a false ', function() {
+        expect(isVowel('banana')).toBe(false);
+    });
 
 })
 
@@ -99,6 +121,9 @@ describe('add', function (){
     });
     it('should return a true for a as input', function() {
         expect(add(2,3)).toBe(5);
+    });
+    it('should return a true for a as input', function() {
+        expect(add(-2,-3)).toBe(-5);
     });
 
 })
