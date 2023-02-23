@@ -32,12 +32,23 @@ describe('sayHello', function(){
     // it('should returns Hello Pat ', function (){
     //     expect(sayHello("Pat")).toBe("Hello Pat")
     // })
-
-    it('should returns Hello, World ', function (){
+    it('should return Hello, World ', function (){
+        expect(sayHello(2.3)).toBe("Hello, World!")
+    })
+    it('should return Hello, World ', function (){
         expect(sayHello(true)).toBe("Hello, World!")
     })
-    it('should returns Hello, World ', function (){
+    it('should return Hello, World ', function (){
         expect(sayHello(false)).toBe("Hello, World!")
+    })
+    it('should return Hello, World ', function (){
+        expect(sayHello(null)).toBe("Hello, World!")
+    })
+    it('should return Hello, World ', function (){
+        expect(sayHello('')).toBe("Hello, World!")
+    })
+    it('should return Hello, World ', function (){
+        expect(sayHello({})).toBe("Hello, World!")
     })
 })
 
@@ -48,7 +59,7 @@ describe('isFive', function (){
     it('should return a boolean', function() {
         expect(typeof isFive()).toBe('boolean');
     });
-    it('should return a boolean', function() {
+    it('should return true', function() {
         expect(isFive(5)).toBe(true);
     });
 
