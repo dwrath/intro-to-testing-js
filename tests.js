@@ -15,10 +15,21 @@ describe('helloWorld', function() {
 });
 describe('sayHello', function(){
     it('should be a defined function', function (){
-        expect(typeof sayHello).toBe('function')
+        expect(typeof sayHello).toBe('function');
     });
     it('function should return a string', function (){
-        expect(typeof sayHello()).toBe("string")
+        expect(typeof sayHello()).toBe("string");
     })
+    it('should return Hello Jane when executed', function (){
+        expect(sayHello("Jane")).toBe("Hello Jane")
+    })
+    it('should return Hello Alex when executed', function (){
+        expect(sayHello("Alex")).toBe("Hello Alex")
+    })
+    it('should returns Hello Pat ', function (){
+        expect(sayHello("Pat")).toBe("Hello Pat")
+    })
+
+
 
 })
